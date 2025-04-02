@@ -32,11 +32,13 @@ samples = [
 # Create a GenericNER instance
 ner = GenericNER(
     model_name="distilbert-base-multilingual-cased",
+    model_dir="someDirToStoreModel",
     tag_field_map={"B-QUANTITY": "quantity", "B-ITEM": "name"}  # map tags to JSON keys
 )
 
 # Train the model on the small dataset
 ner.train(samples)
+# ner.train(file_path="fileWithTrainingData")
 
 # Predict using trained model
 result = ner.predict("Ще взема три бири и една вода.")
