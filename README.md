@@ -17,7 +17,7 @@ To install locally as a package:
 pip install -e .
 ```
 
-##Sample usage
+## Sample usage
 ```
 from bertsonify.core import GenericNER
 
