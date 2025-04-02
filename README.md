@@ -15,9 +15,11 @@ To install locally as a package:
 
 ```bash
 pip install -e .
+```
 
-
-`from bertsonify.core import GenericNER
+##Sample usage
+```
+from bertsonify.core import GenericNER
 
 # Sample training data: one prompt, one structured JSON output
 samples = [
@@ -42,4 +44,4 @@ result = ner.predict("Ще взема три бири и една вода.")
 # Use the result programmatically
 for item in result["items"]:
     print(f"{item.get('quantity', '?')} x {item.get('name', '?')}")
-`
+```
